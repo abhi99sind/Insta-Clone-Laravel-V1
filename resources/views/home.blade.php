@@ -10,7 +10,9 @@
             <div class="d-flex justify-content-between">
                 <div class="d-flex pb-3">
                 <h1>{{ $user->username }}</h1>
+                @cannot('view', $user->profile)
                 <follow-button user-id = "{{ $user->id }}" follows="{{ $follows }}"></follow-button>
+                @endcannot
                 </div>
             @can('view',$user->profile)
             <a href="/post/create">Add New Post</a>
@@ -20,7 +22,7 @@
             <a href="/profiles/{{$user->id}}/edit">Edit My Profile</a>
             @endcan
             <div class="d-flex pl-3">
-            <div class="pr-3"><strong>{{$postCount}}</strong> Posts</div>
+            <div class="pr-3"><strong>{{ $postCount}}</strong> Posts</div>
             <div class="pr-3"><strong>{{ $followersCount }}</strong> Followers</div>
             <div class="pr-3"><strong>{{ $followingCount }}</strong> Following</div>
             </div>
