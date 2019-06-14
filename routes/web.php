@@ -22,3 +22,8 @@ Route::post('/post', 'PostController@stores');
 Route::get('/profiles/{user}', 'ProfilesController@index')->name('profiles.show');
 Route::get('/profiles/{user}/edit', 'ProfilesController@edit');
 Route::patch('/profiles/{user}', 'ProfilesController@update');
+Route::get('/post/like/{id}','PostController@likePost')->name('post.like');
+Route::get('/post/unlike/{id}','PostController@unlike')->name('post.unlike');
+Route::get('post/{po}/edit', 'PostController@editPost')->name('post.edit');
+Route::patch('/post/{po}', 'PostController@updatePost');
+Route::get('/post/{po}/delete','PostController@deletePost');
