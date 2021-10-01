@@ -8,6 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
-{
+{ 
+    // satija ne kara sindhwani ko friendzone
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
