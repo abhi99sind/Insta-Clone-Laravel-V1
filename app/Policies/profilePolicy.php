@@ -11,7 +11,7 @@ class profilePolicy
     use HandlesAuthorization;
 
     /**
-     * Determine whether the user can view the profile.
+     * Determine whether the user can View the profile.
      *
      * @param  \App\User  $user
      * @param  \App\Profile  $profile
